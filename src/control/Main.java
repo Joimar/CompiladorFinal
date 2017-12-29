@@ -13,7 +13,7 @@ public class Main {
 			//System.out.println(filenames.length + " arquivos encontrados\n");
 			for (int i = 0; i < filenames.length; i++) {
 				la = new Lexer();
-				//System.out.println(filenames[i]);
+				//System.out.println(filenames[i]);m
 				la.error.clear();
 				la.recognizeCode(dir_codes, filenames[i]);			
 				Parser parser = new Parser(la.tokensList);
