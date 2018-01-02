@@ -6,6 +6,7 @@
 package Tabela;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Hashtable;
 import model.Token;
 
 /**
@@ -15,23 +16,38 @@ import model.Token;
 public class Tabela 
 {
      private HashMap map;
+     private Hashtable tabela;
     public Tabela()
     {
-    
+        
         map = new HashMap();
-    
+        tabela = new Hashtable();
     }
     
-    Token token;
+    
    
     
     
     
-    public void Add()
+    public void Add(int chave,Hash valor)
     {
     
-        
+        tabela.put(valor, chave); 
     
     }
     
+    
+    
+    public void delete(int chave)
+    {
+    
+        tabela.remove(chave); 
+    }
+    
+    public void delete(int chave, Hash valor)
+    {
+    
+        tabela.remove(chave, valor);
+        
+    }
 }
